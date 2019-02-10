@@ -29,10 +29,7 @@
 
 #ifdef CONFIG_WAKE_GESTURES
 #include <linux/wake_gestures.h>
-<<<<<<< HEAD
 static bool CheckCallStatus;
-=======
->>>>>>> 031cf17fd9a... touchscreen: wake_gestures: Implement a barebone call check
 #endif
 
 #define TIMEOUT_MS 300
@@ -5349,18 +5346,8 @@ int voc_end_voice_call(uint32_t session_id)
 		voc_set_ext_ec_ref(AFE_PORT_INVALID, false);
 
 #ifdef CONFIG_WAKE_GESTURES
-<<<<<<< HEAD
 	CheckCallStatus = false;
 #endif
-=======
-/* return flase if phone is not on call */
-bool IsOnCall(void)
-{
-	return false;
-}
-#endif
-
->>>>>>> 031cf17fd9a... touchscreen: wake_gestures: Implement a barebone call check
 	mutex_unlock(&v->lock);
 	return ret;
 }
@@ -5683,15 +5670,7 @@ int voc_start_voice_call(uint32_t session_id)
 	}
 
 #ifdef CONFIG_WAKE_GESTURES
-<<<<<<< HEAD
 	CheckCallStatus = true;
-=======
-/* return true if phone is not on call */
-bool IsOnCall(void)
-{
-        return true;
-}
->>>>>>> 031cf17fd9a... touchscreen: wake_gestures: Implement a barebone call check
 #endif
 
 fail:
